@@ -62,15 +62,15 @@ var objWi = function(){
             $vidget.animate({
                 'left': '+=300'
             }, 1000, function() {
-                $(this).removeClass('invisible').addClass('visible');
+                $(this).addClass('visible');
             });
         },
         hide = function(){
-            if ($vidget.hasClass('invisible')) return;
+            if (!$vidget.hasClass('visible')) return;
             $vidget.animate({
                 'left': '-=300'
             }, 1000, function() {
-                $(this).addClass('invisible').removeClass('visible');
+                $(this).removeClass('visible');
             });
         },
         sendData = function() {
